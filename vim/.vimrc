@@ -1,0 +1,114 @@
+"—————————————--------------
+" Start Neobundle Settings.
+"---------------------------
+" bundleで管理するディレクトリを指定
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+" neobundle自体をneobundleで管理
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" ここらへんから追加プラグイン "
+
+" NERDTreeを設定
+NeoBundle 'scrooloose/nerdtree'
+
+" 閉じ括弧自動入力
+"NeoBundle 'Townk/vim-autoclose'
+
+" バックアップファイルを作らない
+set nobackup
+" スワップファイルを作らない
+set noswapfile
+" 編集中のファイルが変更されたら自動で読み直す
+set autoread
+" バッファが編集中でもその他のファイルを開けるように
+set hidden
+" 入力中のコマンドをステータスに表示する
+set showcmd
+" clipbordを有効化する
+set clipboard+=unnamed
+
+" タブを表示するときの幅
+set tabstop=4
+" タブを挿入するときの幅
+set shiftwidth=4
+" タブをタブとして扱う(or スペースに展開しない)
+"set noexpandtab
+set expandtab
+" 不可視文字を可視化(タブが「▸-」と表示される)
+set list listchars=tab:\▸\-
+"キーを押した時に挿入される空白の量。softtabstop=0で指定するとtabstopでの指定量になる" 
+set softtabstop=0
+" 高度なインデント
+set smarttab
+" 行番号表示
+set number
+" 現在の行を強調表示
+set cursorline
+" 現在の行を強調表示（縦）
+set cursorcolumn
+" 行末の1文字先までカーソルを移動できるように"
+set virtualedit=onemore
+" 括弧入力時の対応する括弧を表示
+set showmatch
+" ステータスラインを常に表示
+set laststatus=2
+" コマンドラインの補完
+set wildmode=list:longest
+
+" 検索文字列入力時に順次対象文字列にヒットさせる
+set incsearch
+" 検索時に最後まで行ったら最初に戻る
+set wrapscan
+" 検索語をハイライト表示
+set hlsearch
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" マウスでの操作を許可
+set mouse=a
+set ttymouse=xterm2
+
+" escが遠いので代用する。
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
+
+" Yで「行全体をコピー」から「カーソル位置から行末までをコピー」に変更」
+nnoremap <C-y> y$
+
+" カラースキーマーの設定(~/.vim/colors/)
+colorscheme molokai
+"colorscheme darktango
+"colorscheme mirodark
+"colorscheme railscasts
+syntax on
+set t_Co=256
+set background=dark
+"let g:darktango_original = 1
+"let g:rehash256 = 1
+
+"-------- マークダウン --------
+"NeoBundle 'plasticboy/vim-markdown'
+"NeoBundle 'kannokanno/previm'
+"NeoBundle 'tyru/open-browser.vim'
+
+"au BufRead,BufNewFile *.md set filetype=markdown
+"let g:previm_open_cmd = 'open -a Firefox'
+"-----------------------------
+
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+
+" 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
+" 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
+NeoBundleCheck
+
+"-------------------------
+" End Neobundle Settings.
+"-------------------------
