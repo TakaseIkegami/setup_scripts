@@ -1,3 +1,5 @@
+sudo apt install -y vim
+
 # vimrcコピー
 cp vimrc ~/.vimrc
 
