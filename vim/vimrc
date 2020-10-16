@@ -2,17 +2,17 @@
 " Start Neobundle Settings.
 "---------------------------
 " bundleで管理するディレクトリを指定
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+"set runtimepath+=~/.vim/bundle/neobundle.vim/
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+"call neobundle#begin(expand('~/.vim/bundle/'))
 " neobundle自体をneobundleで管理
-NeoBundleFetch 'Shougo/neobundle.vim'
+"NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ここらへんから追加プラグイン "
 
 " NERDTreeを設定
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 
 " 閉じ括弧自動入力
 "NeoBundle 'Townk/vim-autoclose'
@@ -99,7 +99,7 @@ set background=dark
 "-----------------------------
 
 
-call neobundle#end()
+"call neobundle#end()
 
 " Required:
 filetype plugin indent on
@@ -107,7 +107,7 @@ filetype plugin indent on
 
 " 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
 " 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
-NeoBundleCheck
+"NeoBundleCheck
 
 "-------------------------
 " End Neobundle Settings.
